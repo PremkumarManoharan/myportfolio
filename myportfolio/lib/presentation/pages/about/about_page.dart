@@ -172,41 +172,37 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                     controller: _controller,
                   ),
                   CustomSpacer(heightFactor: 0.1),
-                   Positioned (
-            right: 0,
-            bottom: 0,
-            child: ResponsiveBuilder(
-              builder: (context, sizingInformation) {
-                double screenWidth = sizingInformation.screenSize.width;
-                if (screenWidth < RefinedBreakpoints().tabletNormal) {
-                  return Container();
-                } else {
-                  return InkWell(
-                    hoverColor: Colors.transparent,
-                    onTap: () {
-                      Scrollable.ensureVisible(
-                        key.currentContext!,
-                        duration: kDuration,
-                      );
-                    },
-                    child: Container(
-                      margin: EdgeInsets.only(right: 24, bottom: 40),
-                      child: MouseRegion(
-                        onEnter: (e) => scrollDownButtonController.forward(),
-                        onExit: (e) => scrollDownButtonController.reverse(),
-                        child: AnimatedSlideTranstion(
-                          controller: scrollDownButtonController,
-                          beginOffset: Offset(0, 0),
-                          targetOffset: Offset(0, 0.1),
-                          child: ScrollDownButton(),
-                        ),
-                      ),
-                    ),
-                  );
-                }
-              },
-            ),
-          ),
+                   ResponsiveBuilder(
+                     builder: (context, sizingInformation) {
+                       double screenWidth = sizingInformation.screenSize.width;
+                       if (screenWidth < RefinedBreakpoints().tabletNormal) {
+                         return Container();
+                       } else {
+                         return InkWell(
+                           hoverColor: Colors.transparent,
+                           onTap: () {
+                             Scrollable.ensureVisible(
+                               key.currentContext!,
+                               duration: kDuration,
+                             );
+                           },
+                           child: Container(
+                             margin: EdgeInsets.only(right: 24, bottom: 40),
+                             child: MouseRegion(
+                               onEnter: (e) => scrollDownButtonController.forward(),
+                               onExit: (e) => scrollDownButtonController.reverse(),
+                               child: AnimatedSlideTranstion(
+                                 controller: scrollDownButtonController,
+                                 beginOffset: Offset(0, 0),
+                                 targetOffset: Offset(0, 0.1),
+                                 child: ScrollDownButton(),
+                               ),
+                             ),
+                           ),
+                         );
+                       }
+                     },
+                   ),
                   VisibilityDetector(
                     key: Key('story-section'),
                     onVisibilityChanged: (visibilityInfo) {
