@@ -180,6 +180,13 @@ class Data {
       imageSize: 0.325,
       awardedBy: StringConst.MICROSOFT,
     ),
+    CertificationData(
+      title: StringConst.AZ104,
+      url: StringConst.AZ104_URL,
+      image: ImagePath.AZ104_CERT,
+      imageSize: 0.325,
+      awardedBy: StringConst.MICROSOFT,
+    ),
   ];
 
   static List<ExperienceData> experienceData = [

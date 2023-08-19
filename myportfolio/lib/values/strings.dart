@@ -183,8 +183,9 @@ class StringConst {
 
   //Certificate Urls
   static const String AZ900_URL =
-      "https://www.credly.com/badges/c81430c6-55f1-42ae-8d30-58e85147cfa0/linked_in_profile";
-
+      "https://learn.microsoft.com/api/credentials/share/en-us/PremKumarRaghavaManoharan-5373/1EBFFEF4EE83F3AB?sharingId=6DEF4A433767F61F";
+  static const String AZ104_URL =
+      "https://learn.microsoft.com/api/credentials/share/en-us/PremKumarRaghavaManoharan-5373/A61575DAD8190532?sharingId=6DEF4A433767F61F";
   //AwardedBy
   static const String GOOGLE = "Google";
   static const String UDACITY = "Udacity";
@@ -192,6 +193,7 @@ class StringConst {
 
   //CertificationType
   static const String AZ900 = "Microsoft Azure Fundamentals";
+  static const String AZ104 = "Microsoft Azure Administrator Associate";
   static const String ASSOCIATE_ANDROID_DEV = "Associate Android Developer";
   static const String CLOUD_DEVELOPER = "Cloud Developer";
   static const String DATA_SCIENCE = "Data Science";
